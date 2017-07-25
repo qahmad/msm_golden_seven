@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-md-6">
+
+        <h1>Director Details</h1>
+
+        <p>
+          <%= @director.name %>
+        </p>
+        
+        <p>
+          <%= @director.bio %>
+        </p>
+        
+        <p>
+          <%= @director.dob %>
+        </p>
+        
+        <img src="<%= @director.image_url %>">
+        
+        <p>
+          <%= @director.created_at%>
+        </p>
+        
+        <a href="/directors" class="btn btn-default">
+          Go back
+        </a>
+        
+        <a href="/directors/<%= @director.id %>/edit" class="btn btn-default">
+          Edit
+        </a>
+        
+        <a href="/delete_director/<%= @director.id %>" class="btn btn-default">
+          Delete
+        </a>
+    </div>
+</div>

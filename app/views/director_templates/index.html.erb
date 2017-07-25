@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="col-md-6">
+
+        <h1>All Directors</h1>
+
+        <a href="/directors/new">
+          Add a new director
+        </a>
+        
+        <% @directors.each do |the_director| %>
+          <div class="thumbnail">
+            <img src="<%= the_director.image_url %>">
+            <p><%= the_director.name %></p>
+    
+            <div class="caption">
+              <a href="/directors/<%= the_director.id %>" class="btn btn-default btn-block">
+                Show Details
+              </a>
+        
+              <a href="/directors/<%= the_director.id %>/edit" class="btn btn-default btn-block">
+                Edit
+              </a>
+        
+              <a href="/delete_directors/<%= the_director.id %>" class="btn btn-default btn-block">
+                Delete
+              </a>
+        <% end %>
+
+            </div>
+          </div>
+     </div>
+</div>
