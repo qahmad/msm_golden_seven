@@ -14,6 +14,10 @@
         <p>
           <%= @director.dob %>
         </p>
+
+        <p>
+          <%= @director.image_url %>
+        </p>
         
         <img src="<%= @director.image_url %>">
         
@@ -26,11 +30,11 @@
         </a>
         
         <a href="/directors/<%= @director.id %>/edit" class="btn btn-default">
-          Edit
+          Edit director
         </a>
         
         <a href="/delete_director/<%= @director.id %>" class="btn btn-default">
-          Delete
+          Delete director
         </a>
     </div>
 </div>

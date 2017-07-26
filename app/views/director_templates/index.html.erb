@@ -15,9 +15,9 @@
             <p><%= the_director.dob %></p>
             <p><%= the_director.image_url %></p>            
             <div class="caption">
-              <a href="/directors/<%= the_director.id %>">Show details</a>
+              <a href="/directors/<%= the_director.id %>" class="btn btn-default btn-block">Show details</a>
               <a href="/directors/<%= the_director.id %>/edit" class="btn btn-default btn-block">Edit</a>
-              <a href="/delete_directors/<%= the_director.id %>" class="btn btn-default btn-block">Delete</a>
+              <a href="/delete_directors/<%= the_director.id %>" class="btn btn-default btn-block">Delete director</a>
             </div>
           </div>
         <% end %>
