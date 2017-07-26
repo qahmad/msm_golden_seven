@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-md-6">
+
+        <h1>All Movies</h1>
+
+        <a href="/movies/new">
+          Add a new movie
+        </a>
+        
+        <% @movies.each do |the_movie| %>
+          <div class="thumbnail">
+            <img src="<%= the_movie.image_url %>">
+            <p><%= the_movie.title %></p>
+            <p><%= the_movie.year %></p>
+            <p><%= the_movie.duration %></p>
+            <p><%= the_movie.description %></p>            
+            <p><%= the_movie.image_url %></p>            
+            <div class="caption">
+              <a href="/movies/<%= the_movie.id %>" class="btn btn-default btn-block">Show details</a>
+              <a href="/movies/<%= the_movie.id %>/edit" class="btn btn-default btn-block">Edit</a>
+              <a href="/delete_movie/<%= the_movie.id %>" class="btn btn-default btn-block">Delete movie</a>
+            </div>
+          </div>
+        <% end %>
+     </div>
+</div>

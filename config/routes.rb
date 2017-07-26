@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # CREATE
   get("/actors/new",                 { :controller => "actors", :action => "new_form" })
-  get("/create_actor",              { :controller => "actors", :action => "create_row" })
+  get("/create_actor",               { :controller => "actors", :action => "create_row" })
 
   # READ
   get("/actors",                     { :controller => "actors", :action => "index" })
@@ -36,6 +36,24 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_director/:toast_id",  { :controller => "directors", :action => "destroy_row" })
+
+
+  ############## MOVIES ##############
+
+  # CREATE
+  get("/movies/new",                 { :controller => "movies", :action => "new_form" })
+  get("/create_movie",               { :controller => "movies", :action => "create_row" })
+
+  # READ
+  get("/movies",                     { :controller => "movies", :action => "index" })
+  get("/movies/:an_id",              { :controller => "movies", :action => "show" })
+
+  # UPDATE
+  get("/movies/:some_id/edit",       { :controller => "movies", :action => "edit_form" })
+  get("/update_movies/:the_id",      { :controller => "movies", :action => "update_row" })
+
+  # DELETE
+  get("/delete_movie/:toast_id",     { :controller => "movies", :action => "destroy_row" })
 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
