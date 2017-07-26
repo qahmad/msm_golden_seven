@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
 
-  get("/",                           { :controller => "directors", :action => "index" })
+  get("/",                           { :controller => "actors", :action => "index" })
 
   ############## ACTORS ##############
 
-  # # CREATE
-  # get("/actors/new",                 { :controller => "actors", :action => "new_form" })
-  # get("/create_actors",            { :controller => "actors", :action => "create_row" })
+  # CREATE
+  get("/actors/new",                 { :controller => "actors", :action => "new_form" })
+  get("/create_actor",              { :controller => "actors", :action => "create_row" })
 
-  # # READ
-  # get("/actors",                  { :controller => "actors", :action => "index" })
-  # get("/actors/:an_id",           { :controller => "actors", :action => "show" })
+  # READ
+  get("/actors",                     { :controller => "actors", :action => "index" })
+  get("/actors/:an_id",              { :controller => "actors", :action => "show" })
 
-  # # UPDATE
-  # get("/actors/:some_id/edit",    { :controller => "actors", :action => "edit_form" })
-  # get("/update_actors/:the_id",   { :controller => "actors", :action => "update_row" })
+  # UPDATE
+  get("/actors/:some_id/edit",       { :controller => "actors", :action => "edit_form" })
+  get("/update_actors/:the_id",      { :controller => "actors", :action => "update_row" })
 
-  # # DELETE
-  # get("/delete_actors/:toast_id", { :controller => "actors", :action => "destroy_row" })
+  # DELETE
+  get("/delete_actor/:toast_id",     { :controller => "actors", :action => "destroy_row" })
 
 
   ############## DIRECTORS ##############

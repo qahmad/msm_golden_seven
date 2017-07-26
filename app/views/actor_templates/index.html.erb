@@ -11,22 +11,15 @@
           <div class="thumbnail">
             <img src="<%= the_actor.image_url %>">
             <p><%= the_actor.name %></p>
-            
+            <p><%= the_actor.bio %></p>
+            <p><%= the_actor.dob %></p>
+            <p><%= the_actor.image_url %></p>            
             <div class="caption">
-              <a href="/actor/<%= the_actor.id %>" class="btn btn-default btn-block">
-                Show Details
-              </a>
-        
-              <a href="/actor/<%= the_actor.id %>/edit" class="btn btn-default btn-block">
-                Edit
-              </a>
-        
-              <a href="/delete_actors/<%= the_actor.id %>" class="btn btn-default btn-block">
-                Delete
-              </a>
-        <% end %>
-
+              <a href="/actors/<%= the_actor.id %>" class="btn btn-default btn-block">Show details</a>
+              <a href="/actors/<%= the_actor.id %>/edit" class="btn btn-default btn-block">Edit</a>
+              <a href="/delete_actor/<%= the_actor.id %>" class="btn btn-default btn-block">Delete actor</a>
             </div>
           </div>
+        <% end %>
      </div>
 </div>
