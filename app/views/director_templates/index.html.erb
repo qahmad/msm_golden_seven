@@ -11,22 +11,15 @@
           <div class="thumbnail">
             <img src="<%= the_director.image_url %>">
             <p><%= the_director.name %></p>
-    
+            <p><%= the_director.bio %></p>
+            <p><%= the_director.dob %></p>
+            <p><%= the_director.image_url %></p>            
             <div class="caption">
-              <a href="/directors/<%= the_director.id %>" class="btn btn-default btn-block">
-                Show Details
-              </a>
-        
-              <a href="/directors/<%= the_director.id %>/edit" class="btn btn-default btn-block">
-                Edit
-              </a>
-        
-              <a href="/delete_directors/<%= the_director.id %>" class="btn btn-default btn-block">
-                Delete
-              </a>
-        <% end %>
-
+              <a href="/directors/<%= the_director.id %>" class="btn btn-default btn-block">Show Details</a>
+              <a href="/directors/<%= the_director.id %>/edit" class="btn btn-default btn-block">Edit</a>
+              <a href="/delete_directors/<%= the_director.id %>" class="btn btn-default btn-block">Delete</a>
             </div>
           </div>
+        <% end %>
      </div>
 </div>
