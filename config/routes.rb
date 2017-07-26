@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get("/update_directors/:the_id",   { :controller => "directors", :action => "update_row" })
 
   # DELETE
-  get("/delete_directors/:toast_id", { :controller => "directors", :action => "destroy_row" })
+  get("/delete_director/:toast_id",  { :controller => "directors", :action => "destroy_row" })
 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
