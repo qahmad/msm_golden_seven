@@ -36,7 +36,6 @@ class MoviesController < ApplicationController
   
   def update_row
     movie = Movie.find_by({ :Id => params["the_id"] })
-    
     movie.title = params["movie_title"]
     movie.year = params["movie_year"]
     movie.duration = params["movie_duration"]
